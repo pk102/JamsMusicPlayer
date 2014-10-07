@@ -796,10 +796,10 @@ public class NowPlayingActivity extends FragmentActivity {
 
             //Update the playback UI elements.
             if (mApp.getService().isPlayingMusic()) {
-                animatePauseToPlay();
+                animatePlayToPause();
                 mHandler.removeCallbacks(seekbarUpdateRunnable);
             } else {
-                animatePlayToPause();
+                animatePauseToPlay();
                 mHandler.post(seekbarUpdateRunnable);
             }
 
